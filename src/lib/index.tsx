@@ -51,10 +51,8 @@ export default function LiteYouTubeEmbed(props: LiteYouTube) {
     ? "https://www.youtube.com"
     : "https://www.youtube-nocookie.com";
 
-  const muted = props.muted ? "&mute=1" : "";
-  const iframeSrc = !props.playlist
-    ? `${ytUrl}/embed/${videoId}?autoplay=1${muted}${paramsImp}`
-    : `${ytUrl}/embed/videoseries?autoplay=1${muted}&list=${videoId}${paramsImp}`;
+  const iframeSrc = `${ytUrl}/embed/${videoId}?playlist=${videoId}${paramsImp}`
+    
 
   const activatedClassImp = props.activatedClass || "lyt-activated";
   const adNetworkImp = props.adNetwork || false;

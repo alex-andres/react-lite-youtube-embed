@@ -1,10 +1,10 @@
 declare type imgResolution = "default" | "mqdefault" | "hqdefault" | "sddefault" | "maxresdefault";
 interface LiteYouTube {
+    announce?: string;
     id: string;
     title: string;
     activatedClass?: string;
     adNetwork?: boolean;
-    announce?: string;
     aspectHeight?: number;
     aspectWidth?: number;
     iframeClass?: string;
